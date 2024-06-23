@@ -1,0 +1,12 @@
+.addProductButton {
+  background-color: green;
+  color: rgb(7, 63, 7);
+  width: 20rem;
+  height: 5rem;
+  font-size: 3rem;
+  border-radius: 3rem;
+}
+
+.addProductButton:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,7 @@
+.deleteProduct {
+  display: block;
+}
+
+.deleteProduct:hover {
+  cursor: pointer;
+}
