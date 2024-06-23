@@ -12,6 +12,8 @@ export default function Header() {
         <Link to={"/"}>HomePage</Link>
         <Link to={"jewelery"}>jewelery</Link>
         <Link to={"electronics"}>electronics</Link>
+        <Link to={"menclothes"}>men section</Link>
+        <Link to={"womenclothes"}>women section</Link>
         <Link to={"shoppingcard"}>
           <span className={header.shoppingIcon + " material-symbols-outlined"}>
             shopping_cart
