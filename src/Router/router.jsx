@@ -28,6 +28,24 @@ const routes = (
         />
       }
     />
+    <Route
+      path="menclothes"
+      element={
+        <ShoppingCategory
+          categoryText={"welcome to the man clothing"}
+          productCategory={"men's clothing"}
+        />
+      }
+    />
+    <Route
+      path="womenclothes"
+      element={
+        <ShoppingCategory
+          categoryText={"welcome to the womens clothing"}
+          productCategory={"women's clothing"}
+        />
+      }
+    />
     <Route path="/shop/:id" element={<Product />} />
     <Route path="/shop/:id/productadded" element={<ProductAdded />} />
     <Route path="shoppingcard" element={<ShoppingCard />} />
