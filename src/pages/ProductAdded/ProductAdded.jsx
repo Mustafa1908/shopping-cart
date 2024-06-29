@@ -15,9 +15,9 @@ export default function ProductAdded() {
       <br />
       <Link to={"/electronics"}>electronics</Link>
       <br />
-      <Link to={"/menclothes"}>men clothes</Link>
+      <Link to={"/men"}>men clothes</Link>
       <br />
-      <Link to={"/womenclothes"}>women clothes</Link>
+      <Link to={"/women"}>women clothes</Link>
     </>
   );
 }
