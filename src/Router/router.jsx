@@ -29,20 +29,20 @@ const routes = (
       }
     />
     <Route
-      path="menclothes"
+      path="men"
       element={
         <ShoppingCategory
           categoryText={"welcome to the man clothing"}
-          productCategory={"men's clothing"}
+          productCategory={"men"}
         />
       }
     />
     <Route
-      path="womenclothes"
+      path="women"
       element={
         <ShoppingCategory
           categoryText={"welcome to the womens clothing"}
-          productCategory={"women's clothing"}
+          productCategory={"women"}
         />
       }
     />
