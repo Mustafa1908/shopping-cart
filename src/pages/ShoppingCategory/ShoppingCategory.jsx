@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import shop from "./Shop.module.css";
+import ProductItem from "../../components/ProductItem/ProductItem";
+import shop from "./ShoppingCategory.module.css";
 
 export default function ShoppingCategory({ categoryText, productCategory }) {
   const [fullProductArray, setFullProductArray] = useState(null);
@@ -33,27 +33,22 @@ export default function ShoppingCategory({ categoryText, productCategory }) {
   }, [productCategory]);
 
   return (
-    <div>
-      <p>{categoryText}</p>
-      <p>ozkara</p>
-      <h1>hey</h1>
+    <main className={shop.categoryProductContainer}>
       {fullProductArray &&
         fullProductArray.map((product) => {
           return (
-            <div key={product.description}>
-              <p>{product.description}</p>
-              <Link to={"/shop/" + product.key} state={product}>
-                <img
-                  key={product.description}
-                  src={product.image}
-                  alt=""
-                  className={shop.img}
-                />
-              </Link>
-              <p>{product.price}€</p>
-            </div>
+            <>
+              <ProductItem
+                productData={product}
+                product={product}
+                productDescription={product.description}
+                productImage={product.image}
+                productTitle={product.title}
+                key={product.key}
+              />
+            </>
           );
         })}
-    </div>
+    </main>
   );
 }
