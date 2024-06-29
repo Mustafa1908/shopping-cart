@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { NumberOfProductContext } from "../../App";
+import LinkCategory from "../../components/LinkCategory/LinkCategory";
 import header from "./Header.module.css";
 
 export default function Header() {
@@ -9,17 +10,37 @@ export default function Header() {
   return (
     <>
       <header className={header.header}>
-        <Link to={"/"}>HomePage</Link>
-        <Link to={"jewelery"}>jewelery</Link>
-        <Link to={"electronics"}>electronics</Link>
-        <Link to={"menclothes"}>men section</Link>
-        <Link to={"womenclothes"}>women section</Link>
-        <Link to={"shoppingcard"}>
-          <span className={header.shoppingIcon + " material-symbols-outlined"}>
-            shopping_cart
-          </span>
-          <span>{productCount}</span>
-        </Link>
+        <div className={header.headerMain}>
+          <div className={header.iconContainer}>
+            <span
+              className={header.shoppingIcon + " material-symbols-outlined"}
+            >
+              person
+            </span>
+            <Link to={"shoppingcard"} className={header.headerIconLink}>
+              <span
+                className={header.shoppingIcon + " material-symbols-outlined"}
+              >
+                shopping_bag
+              </span>
+              <span className={header.shoppingCounter}>{productCount}</span>
+            </Link>
+          </div>
+          <Link to={"/"} className={header.headerOneLink}>
+            <h1 className={header.headerOne}>Gensia</h1>
+          </Link>
+        </div>
+        <nav className={header.navBar}>
+          <div className={header.navBarLinkContainer}>
+            <LinkCategory linkLocation={"jewelery"} linkText={"jewelery"} />
+            <LinkCategory
+              linkLocation={"electronics"}
+              linkText={"electronics"}
+            />
+            <LinkCategory linkLocation={"men"} linkText={"men"} />
+            <LinkCategory linkLocation={"women"} linkText={"women"} />
+          </div>
+        </nav>
       </header>
 
       <main>
