@@ -1,12 +1,120 @@
+:root {
+  --step--2: clamp(0.7813rem, 0.7759rem + 0.0268vi, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9196rem + 0.0893vi, 1rem);
+  --step-0: clamp(1.125rem, 1.0893rem + 0.1786vi, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2893rem + 0.3036vi, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5248rem + 0.4759vi, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.8019rem + 0.7106vi, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.1274rem + 1.0271vi, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.5093rem + 1.4505vi, 3.8147rem);
+  --darkYellow: #b45309;
+}
+
+.productContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 40rem;
+  gap: 5rem;
+}
+
+.productImageContainer {
+  width: 350px;
+  min-height: 500px;
+}
+
+.productImage {
+  width: 350px;
+  height: 400px;
+}
+
+.productInformationContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 350px;
+  min-height: 36rem;
+}
+
+.productMainInformationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.productHeader {
+  font-size: var(--step-0);
+  color: var(--darkYellow);
+}
+
+.productPrice {
+  font-size: var(--step-0);
+  font-weight: bold;
+  color: black;
+}
+
+.productLine {
+  border: 1px solid grey;
+  min-width: 80%;
+}
+
+.productDescription {
+  font-size: var(--step--1);
+}
+
+.quantityContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.addProductContainer {
+  display: flex;
+}
+
+.inputQuantity {
+  max-width: 3rem;
+  min-height: 3rem;
+  border-radius: 0.2rem;
+  border: 1px solid black;
+  font-size: var(--step--1);
+  padding-left: 0.3rem;
+}
+
+.changeValueButton {
+  min-width: 1rem;
+  font-size: var(--step-0);
+  background-color: var(--darkYellow);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.changeValueButton:hover {
+  cursor: pointer;
+}
+
+.addButtonContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .addProductButton {
-  background-color: green;
-  color: rgb(7, 63, 7);
+  background-color: white;
+  color: var(--darkYellow);
+  border: 1px solid --darkYellow;
+  opacity: 0.7;
+  font-size: var(--step-2);
   width: 20rem;
-  height: 5rem;
-  font-size: 3rem;
+  min-height: 5rem;
   border-radius: 3rem;
+  float: left;
 }
 
 .addProductButton:hover {
   cursor: pointer;
+  background-color: var(--darkYellow);
+  color: white;
 }
