@@ -45,6 +45,7 @@ export default function ShoppingCategory({ categoryText, productCategory }) {
                 productImage={product.image}
                 productTitle={product.title}
                 key={product.key}
+                productCategory={productCategory}
               />
             </>
           );
