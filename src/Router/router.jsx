@@ -33,7 +33,7 @@ const routes = (
       element={
         <ShoppingCategory
           categoryText={"welcome to the man clothing"}
-          productCategory={"men"}
+          productCategory={"men's clothing"}
         />
       }
     />
@@ -42,12 +42,12 @@ const routes = (
       element={
         <ShoppingCategory
           categoryText={"welcome to the womens clothing"}
-          productCategory={"women"}
+          productCategory={"women's clothing"}
         />
       }
     />
-    <Route path="/shop/:id" element={<Product />} />
-    <Route path="/shop/:id/productadded" element={<ProductAdded />} />
+    <Route path="/:categoryName/:id" element={<Product />} />
+    <Route path="/:categoryName/:id/productadded" element={<ProductAdded />} />
     <Route path="shoppingcard" element={<ShoppingCard />} />
   </Route>
 );
