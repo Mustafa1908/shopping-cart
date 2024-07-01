@@ -7,11 +7,12 @@ export default function ProductItem({
   productDescription,
   productImage,
   productTitle,
+  productCategory,
 }) {
   return (
     <>
       <Link
-        to={"/shop/" + productData.key}
+        to={"/" + productCategory + "/" + productData.key}
         state={product}
         className={productItem.productLink}
       >
