@@ -2,14 +2,13 @@ import { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { ProductListContext, NumberOfProductContext } from "../../App";
-import item from "./Product.module.css";
+import product from "./Product.module.css";
 
 export default function Product() {
   const [productList, setProductList] = useContext(ProductListContext);
   const [productCount, setProductCount] = useContext(NumberOfProductContext);
   const [productQuantity, setProductQuantity] = useState(1);
   let productArray = useLocation();
-  console.log(productArray);
 
   function addProduct() {
     let newProductArray = [
@@ -48,39 +47,64 @@ export default function Product() {
   }
 
   return (
-    <div key={productArray.key}>
-      <p>{productArray.state.title}</p>
-      <p>{productArray.state.price}€</p>
-      <img src={productArray.state.image} alt="" />
-      <p>{productArray.state.description}</p>
-      <Link
-        to={"/shop/" + productArray.state.key + "/productadded"}
-        state={productArray}
-      >
-        <button
-          className={item.addProductButton + " addProductButton"}
-          onClick={addProduct}
+    <div key={productArray.key} className={product.productContainer}>
+      <div className={product.productImageContainer}>
+        <img
+          src={productArray.state.image}
+          alt=""
+          className={product.productImage}
+        />
+      </div>
+      <div className={product.productInformationContainer}>
+        <div className={product.productMainInformationContainer}>
+          <h2 className={product.productHeader}>{productArray.state.title}</h2>
+          <span className={product.productPrice}>
+            ${productArray.state.price}
+          </span>
+          <div className={product.productLine}></div>
+        </div>
+        <p className={product.productDescription}>
+          {productArray.state.description}
+        </p>
+        <div className={product.quantityContainer}>
+          <span className={product.productDescription}>QUANTITY:</span>
+          <div className={product.addProductContainer}>
+            <button
+              className={product.changeValueButton}
+              aria-label="Decrease"
+              onClick={decreaseQuantity}
+            >
+              -
+            </button>
+            <input
+              type="number"
+              className={product.inputQuantity}
+              value={productQuantity}
+            />
+            <button
+              className={product.changeValueButton}
+              aria-label="Increase"
+              onClick={incrementQuantity}
+            >
+              +
+            </button>
+          </div>
+        </div>
+        <Link
+          to={
+            "/" +
+            productArray.state.category +
+            "/" +
+            productArray.state.key +
+            "/productadded"
+          }
+          state={productArray}
+          className={product.addButtonContainer}
         >
-          Add
-        </button>
-      </Link>
-      ;
-      <div className="quantity">
-        <button
-          className="minus"
-          aria-label="Decrease"
-          onClick={decreaseQuantity}
-        >
-          -
-        </button>
-        <input type="number" className="input-box" value={productQuantity} />
-        <button
-          className="plus"
-          aria-label="Increase"
-          onClick={incrementQuantity}
-        >
-          +
-        </button>
+          <button className={product.addProductButton} onClick={addProduct}>
+            Add to cart
+          </button>
+        </Link>
       </div>
     </div>
   );
