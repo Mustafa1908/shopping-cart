@@ -48,6 +48,10 @@ const routes = (
     />
     <Route path="/:categoryName/:id" element={<Product />} />
     <Route path="/:categoryName/:id/productadded" element={<ProductAdded />} />
+    <Route
+      path="/:categoryName/:id/productadded/shoppingcard"
+      element={<ShoppingCard />}
+    />
     <Route path="shoppingcard" element={<ShoppingCard />} />
   </Route>
 );
