@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { ProductListContext, NumberOfProductContext } from "../../App";
 import product from "./Product.module.css";
 
