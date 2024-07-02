@@ -4,6 +4,7 @@ import shop from "./ShoppingCategory.module.css";
 
 export default function ShoppingCategory({ categoryText, productCategory }) {
   const [fullProductArray, setFullProductArray] = useState(null);
+  console.log(fullProductArray);
 
   async function createProductsCardsArray() {
     try {
