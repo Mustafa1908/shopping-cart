@@ -5,7 +5,6 @@ import { useContext } from "react";
 
 export default function ProductAdded() {
   let productArray = useLocation();
-  console.log(productArray);
   return (
     <main className={productAdded.main}>
       <div className={productAdded.productAddedContainer}>
