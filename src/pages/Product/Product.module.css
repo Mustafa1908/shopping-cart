@@ -8,6 +8,7 @@
   --step-4: clamp(2.3328rem, 2.1274rem + 1.0271vi, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.5093rem + 1.4505vi, 3.8147rem);
   --darkYellow: #b45309;
+  --button-text-color: white;
 }
 
 .productContainer {
@@ -90,7 +91,7 @@
   min-width: 1rem;
   font-size: var(--step-0);
   background-color: var(--darkYellow);
-  color: white;
+  color: var(--button-text-color);
   border: 1px solid transparent;
 }
 
@@ -105,7 +106,7 @@
 }
 
 .addProductButton {
-  background-color: white;
+  background-color: var(--button-text-color);
   color: var(--darkYellow);
   border: 1px solid --darkYellow;
   opacity: 0.7;
@@ -119,5 +120,5 @@
 .addProductButton:hover {
   cursor: pointer;
   background-color: var(--darkYellow);
-  color: white;
+  color: var(--button-text-color);
 }

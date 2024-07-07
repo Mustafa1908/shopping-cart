@@ -7,15 +7,16 @@
   --step-3: clamp(1.944rem, 1.8019rem + 0.7106vi, 2.4414rem);
   --step-4: clamp(2.3328rem, 2.1274rem + 1.0271vi, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.5093rem + 1.4505vi, 3.8147rem);
+  --link-color: white;
 }
 
 .link {
   display: block;
   font-size: var(--step--1);
   text-decoration: none;
-  color: white;
+  color: var(--link-color);
 }
 
 .link:hover {
-  border-bottom: 3px solid white;
+  border-bottom: 3px solid var(--link-color);
 }
