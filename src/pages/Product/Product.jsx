@@ -79,6 +79,7 @@ export default function Product() {
               type="number"
               className={product.inputQuantity}
               value={productQuantity}
+              disabled
             />
             <button
               className={product.changeValueButton}
