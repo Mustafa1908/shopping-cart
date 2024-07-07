@@ -1,7 +1,282 @@
-.deleteProduct {
-  display: block;
+:root {
+  --step--2: clamp(0.7813rem, 0.7759rem + 0.0268vi, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9196rem + 0.0893vi, 1rem);
+  --step-0: clamp(1.125rem, 1.0893rem + 0.1786vi, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2893rem + 0.3036vi, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5248rem + 0.4759vi, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.8019rem + 0.7106vi, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.1274rem + 1.0271vi, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.5093rem + 1.4505vi, 3.8147rem);
 }
 
-.deleteProduct:hover {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  min-height: 40rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.shoppingCardHeader {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.categoryTitleContainer {
+  display: flex;
+  padding-bottom: 0.5rem;
+  padding-top: 2rem;
+}
+
+.cardFirstTitle {
+  width: 40%;
+  font-size: var(--step--1);
+  font-weight: 600;
+}
+
+.cardTitle {
+  width: 20%;
+  font-size: var(--step--1);
+  font-weight: 600;
+}
+
+.finalTitle {
+  width: 20%;
+  font-size: var(--step--1);
+  font-weight: 600;
+  padding-left: 1rem;
+}
+
+.lineSeparator {
+  width: 100%;
+  border: 1px solid grey;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.productsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.productItemContainer {
+  display: flex;
+  align-items: center;
+}
+
+.productImageTitleContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 5rem;
+  gap: 2rem;
+  width: 40%;
+}
+
+.productImage {
+  width: 110px;
+  height: 110px;
+}
+
+.productTitle {
+  width: 45%;
+  min-height: 3rem;
+  font-size: var(--step--1);
+  font-weight: 500;
+}
+
+.productPrice {
+  width: 20%;
+  font-size: var(--step--1);
+  opacity: 0.9;
+}
+
+.quantityContainer {
+  width: 20%;
+}
+.modifyQuantityContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 6rem;
+  border: 1px solid black;
+}
+
+.buttonModifyQuantity {
+  min-height: 1.5rem;
+  width: 2rem;
+  font-size: var(--step--0);
+  border-radius: 0.3rem;
+  background-color: transparent;
+  color: black;
+  border: 1px solid transparent;
+}
+
+.inputQuantity {
+  border-radius: 0.3rem;
+  min-height: 1.5rem;
+  max-width: 2.4rem;
+  padding-left: 0.1rem;
+  font-size: var(--step--1);
+  text-align: center;
+  background-color: white;
+  border: 1px solid transparent;
+}
+
+.totalRemoveContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 20%;
+  min-height: 2rem;
+  padding-left: 1rem;
+}
+
+.productFinalPrice {
+  max-width: 5rem;
+  font-size: var(--step--1);
+  opacity: 0.9;
+  overflow-wrap: break-word;
+}
+
+.removeButton {
+  max-width: 10rem;
+  height: 2rem;
+  font-size: var(--step--2);
+  font-weight: bold;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-decoration: underline;
+  border: 1px solid transparent;
+}
+
+.removeButton:hover {
+  background-color: #b91c1c;
+  color: white;
+  text-decoration-color: white;
   cursor: pointer;
+}
+
+.buyContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.totalPriceContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  max-width: 50rem;
+}
+
+.finalPriceText {
+  font-size: var(--step-2);
+  font-weight: bolder;
+}
+
+.shippingText {
+  display: block;
+  font-size: var(--step--2);
+  font-weight: 600;
+}
+
+.checkoutButton {
+  background-color: #27272a;
+  color: white;
+  font-size: var(--step-0);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 40%;
+  max-width: 15rem;
+  min-height: 3rem;
+  border-radius: 0.1rem;
+}
+
+.checkoutButton:hover {
+  cursor: pointer;
+}
+
+.keepShoppingText {
+  color: black;
+  opacity: 0.7;
+  text-decoration: underline;
+  padding-top: 0.5rem;
+  padding-bottom: 3rem;
+}
+
+.keepShoppingText:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 365px) {
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    width: 99%;
+  }
+
+  .finalTitle {
+    width: 20%;
+    font-size: var(--step--1);
+    font-weight: 600;
+    padding-left: 1rem;
+  }
+
+  .totalRemoveContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 20%;
+    min-height: 2rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width: 765px) {
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+    width: 80%;
+  }
+
+  .finalTitle {
+    width: 20%;
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+
+  .totalRemoveContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 20%;
+    min-height: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .categoryProductContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7rem;
+    min-height: 30rem;
+  }
 }
