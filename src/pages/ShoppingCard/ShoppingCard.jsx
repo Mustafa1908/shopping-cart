@@ -1,18 +1,20 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { NumberOfProductContext, ProductListContext } from "../../App";
-import shoppingCards from "./ShoppingCard.module.css";
+import shoppingCard from "./ShoppingCard.module.css";
 
 export default function ShoppingCard() {
   const [productList, setProductList] = useContext(ProductListContext);
   const [productCount, setProductCount] = useContext(NumberOfProductContext);
   const [finalPrice, setFinalPrice] = useState(0);
+
   // Calculate all products price
   useEffect(() => {
     let priceTotal = 0;
     for (let i = 0; i < productList.length; i++) {
       priceTotal += productList[i][1];
     }
-
+    priceTotal = Number(priceTotal.toFixed(2));
     setFinalPrice(priceTotal);
   }, [productList]);
   const deleteByIndex = (index) => {
@@ -26,6 +28,7 @@ export default function ShoppingCard() {
     let newProductArray = productList.slice();
     newProductArray[index][3] += 1;
     newProductArray[index][1] += newProductArray[index][4];
+    newProductArray[index][1] = Number(newProductArray[index][1].toFixed(2));
 
     setProductList(newProductArray);
     setProductCount(productCount + 1);
@@ -44,61 +47,108 @@ export default function ShoppingCard() {
     setProductCount(productCount - 1);
   }
 
-  function buyItems() {
-    setProductCount(0);
+  function buyItem() {
     setProductList("");
+    setFinalPrice(0);
+    setProductCount(0);
   }
 
   return (
-    <>
-      <p>Welcome</p>
-      <p>To the</p>
-      <p>shopping card</p>
-      {productList &&
-        productList.map((product, index) => {
-          return (
-            <div key={productList[index][5]}>
-              <p>{product[0]}</p>
-              <img key={product[0]} src={product[2]} alt="" />
-              <p>{product[1]}</p>
-              <div>
-                <span
-                  className={
-                    shoppingCards.deleteProduct + " material-symbols-outlined"
-                  }
-                  onClick={() => deleteByIndex(index)}
-                >
-                  delete
-                </span>
-                <div class="quantity">
-                  <button
-                    className="minus"
-                    aria-label="Decrease"
-                    onClick={() => decreaseQuantity(index)}
+    <main className={shoppingCard.main}>
+      <div className={shoppingCard.cardContainer}>
+        <h2 className={shoppingCard.shoppingCardHeader}>Your Cart</h2>
+        <div className={shoppingCard.cardProductContainer}>
+          <div className={shoppingCard.categoryTitleContainer}>
+            <span className={shoppingCard.cardFirstTitle}>ITEM</span>
+            <span className={shoppingCard.cardTitle}>PRICE</span>
+            <span className={shoppingCard.cardTitle}>QUANTITY</span>
+            <span className={shoppingCard.finalTitle}>TOTAL</span>
+          </div>
+          <div className={shoppingCard.lineSeparator}></div>
+          <div className={shoppingCard.productsContainer}>
+            {productList &&
+              productList.map((product, index) => {
+                return (
+                  <div
+                    key={productList[index][5]}
+                    className={shoppingCard.productItemContainer}
                   >
-                    -
-                  </button>
-                  <input
-                    type="number"
-                    className="input-box"
-                    value={productList[index][3]}
-                  />
-                  <button
-                    className="plus"
-                    aria-label="Increase"
-                    onClick={() => incrementQuantity(index)}
-                  >
-                    +
-                  </button>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      <p>Total price: {finalPrice}€</p>
-      <button className="buyButton" onClick={buyItems}>
-        Buy the items
-      </button>
-    </>
+                    <div className={shoppingCard.productImageTitleContainer}>
+                      <img
+                        key={product[0]}
+                        src={product[2]}
+                        alt=""
+                        className={shoppingCard.productImage}
+                      />
+                      <span className={shoppingCard.productTitle}>
+                        {product[0]}
+                      </span>
+                    </div>
+                    <span className={shoppingCard.productPrice}>
+                      ${product[4]}
+                    </span>
+                    <div className={shoppingCard.quantityContainer}>
+                      <div className={shoppingCard.modifyQuantityContainer}>
+                        <button
+                          className={shoppingCard.buttonModifyQuantity}
+                          aria-label="Decrease"
+                          onClick={() => decreaseQuantity(index)}
+                        >
+                          -
+                        </button>
+                        <input
+                          type="number"
+                          className={shoppingCard.inputQuantity}
+                          disabled
+                          value={productList[index][3]}
+                        />
+                        <button
+                          className={shoppingCard.buttonModifyQuantity}
+                          aria-label="Increase"
+                          onClick={() => incrementQuantity(index)}
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div className={shoppingCard.totalRemoveContainer}>
+                      <span className={shoppingCard.productFinalPrice}>
+                        ${product[1]}
+                      </span>
+                      <button
+                        className={shoppingCard.removeButton}
+                        onClick={() => deleteByIndex(index)}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
+        <div className={shoppingCard.lineSeparator}></div>
+        <div className={shoppingCard.buyContainer}>
+          <div className={shoppingCard.totalPriceContainer}>
+            <span className={shoppingCard.finalPriceText}>
+              Subtotal ${finalPrice}
+            </span>
+            <span className={shoppingCard.shippingText}>
+              Shipping and taxes computed at checkout
+            </span>
+            <div className={shoppingCard.lineSeparator}></div>
+          </div>
+          <button
+            className={shoppingCard.checkoutButton}
+            onClick={() => buyItem()}
+          >
+            CHECKOUT
+          </button>
+          <Link to={"/electronics"} className={shoppingCard.keepShoppingText}>
+            Keep shopping
+          </Link>
+        </div>
+      </div>
+    </main>
   );
 }
