@@ -1,7 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
 import productAdded from "./ProductAdded.module.css";
-import { ProductListContext } from "../../App";
-import { useContext } from "react";
 
 export default function ProductAdded() {
   let productArray = useLocation();
