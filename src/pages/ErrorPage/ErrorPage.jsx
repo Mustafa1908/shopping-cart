@@ -7,7 +7,7 @@ const ErrorPage = () => {
     <div className={errorPage.errorPageContainer}>
       <h1>ERROR 404</h1>
       <h2>This is weird</h2>
-      <p>
+      <p className={errorPage.mainParagraph}>
         This page doesn't exist or is in construction. Sorry for the
         inconvenience.
       </p>
