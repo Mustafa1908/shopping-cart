@@ -1,0 +1,20 @@
+.errorPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: grey;
+  gap: 1rem;
+}
+
+.linkToContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-bottom: 10rem;
+  min-height: 10rem;
+  max-width: 35rem;
+}
