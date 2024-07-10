@@ -8,6 +8,10 @@
   gap: 1rem;
 }
 
+.mainParagraph {
+  text-align: center;
+}
+
 .linkToContainer {
   display: flex;
   align-items: center;
@@ -16,5 +20,6 @@
   gap: 2rem;
   padding-bottom: 10rem;
   min-height: 10rem;
-  max-width: 35rem;
+  max-width: 24rem;
+  padding-left: 0.3rem;
 }
