@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import routes from "./Router/router";
 import "./index.css";
+import Footer from "./components/Footer/Footer";
 
 const router = createBrowserRouter(createRoutesFromElements(routes));
 
@@ -20,6 +21,7 @@ function App() {
     <ProductListContext.Provider value={[productList, setProductList]}>
       <NumberOfProductContext.Provider value={[productCount, setProductCount]}>
         <RouterProvider router={router} />
+        <Footer />
       </NumberOfProductContext.Provider>
     </ProductListContext.Provider>
   );
