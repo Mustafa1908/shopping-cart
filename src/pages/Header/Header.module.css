@@ -24,7 +24,7 @@
   flex-direction: column;
   background-color: #94a3b8;
   min-width: 100%;
-  min-height: 10rem;
+  min-height: 5rem;
 }
 
 .iconContainer {
@@ -97,7 +97,7 @@
   min-width: 70%;
 }
 
-@media (min-width: 368px) {
+@media (min-width: 300px) {
   .navBarLinkContainer {
     display: flex;
     justify-content: flex-start;
