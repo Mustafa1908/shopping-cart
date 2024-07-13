@@ -58,8 +58,14 @@
 
 .shoppingIcon {
   display: block;
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: black;
+  padding: 5px;
+}
+
+.shoppingIcon:hover {
+  background-color: grey;
+  border-radius: 50%;
 }
 
 .shoppingCounter {
