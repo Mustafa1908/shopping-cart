@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import LinkTo from "../../components/LinkTo/LinkTo";
 import errorPage from "./ErrorPage.module.css";
+import dog from "../../assets/images/dog.jpg";
 
 const ErrorPage = () => {
   return (
@@ -11,6 +11,7 @@ const ErrorPage = () => {
         This page doesn't exist or is in construction. Sorry for the
         inconvenience.
       </p>
+      <img src={dog} alt="" className={errorPage.errorImage} />
       <span>Try the links below!</span>
       <div className={errorPage.linkToContainer}>
         <LinkTo LinkText={"MAINPAGE"} LinkPath={"/"} />
