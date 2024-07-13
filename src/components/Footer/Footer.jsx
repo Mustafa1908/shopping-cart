@@ -8,7 +8,7 @@ import facebook from "../../assets/images/facebook.png";
 export default function Footer() {
   return (
     <footer className={footer.footer}>
-      <div className={footer.memberContainer}>
+      <section className={footer.memberContainer}>
         <div className={footer.memberTextContainer}>
           <h3 className={footer.memberTextHeader}>BECOME A MEMBER</h3>
           <span className={footer.memberText}>
@@ -17,10 +17,10 @@ export default function Footer() {
           </span>
         </div>
         <button className={footer.memberButton}>Sign up for free</button>
-      </div>
-      <div className={footer.linkContainer}>
-        <div className={footer.mainLinkContainer}>
-          <div className={footer.pageLinkContainer}>
+      </section>
+      <section className={footer.linkContainer}>
+        <section className={footer.mainLinkContainer}>
+          <section className={footer.pageLinkContainer}>
             <div className={footer.mainLinkSet}>
               <h3 className={footer.mainLinkSetHeader}>COMPANY</h3>
               <span className={footer.mainLinkText}>Our Story</span>
@@ -44,36 +44,46 @@ export default function Footer() {
               <span className={footer.mainLinkText}>FAQ</span>
               <span className={footer.mainLinkText}>Contacts us</span>
             </div>
-          </div>
-          <div className={footer.iconContainer}>
-            <img
-              src={instagram}
-              alt="instagram icon"
-              className={footer.socialMediaIcon}
-            />
-            <img
-              src={youtube}
-              alt="youtube icon"
-              className={footer.socialMediaIcon}
-            />
-            <img
-              src={tiktok}
-              alt="tiktok icon"
-              className={footer.socialMediaIcon}
-            />
-            <img
-              src={twitter}
-              alt="twitter icon"
-              className={footer.socialMediaIcon}
-            />
-            <img
-              src={facebook}
-              alt="facebook icon"
-              className={footer.socialMediaIcon}
-            />
-          </div>
-        </div>
-        <div className={footer.secondaryContainer}>
+          </section>
+          <ul className={footer.iconContainer}>
+            <li>
+              <img
+                src={youtube}
+                alt="youtube icon"
+                className={footer.socialMediaIcon}
+              />
+            </li>
+            <li>
+              <img
+                src={instagram}
+                alt="instagram icon"
+                className={footer.socialMediaIcon}
+              />
+            </li>
+            <li>
+              <img
+                src={tiktok}
+                alt="tiktok icon"
+                className={footer.socialMediaIcon}
+              />
+            </li>
+            <li>
+              <img
+                src={twitter}
+                alt="twitter icon"
+                className={footer.socialMediaIcon}
+              />
+            </li>
+            <li>
+              <img
+                src={facebook}
+                alt="facebook icon"
+                className={footer.socialMediaIcon}
+              />
+            </li>
+          </ul>
+        </section>
+        <section className={footer.secondaryContainer}>
           <a
             href="https://github.com/Mustafa1908/shopping-cart/tree/main"
             className={footer.pageCreatorLink}
@@ -86,8 +96,8 @@ export default function Footer() {
             <span className={footer.mainLinkText}>Terms and Conditions</span>
             <span className={footer.mainLinkText}>Accessibility Policy</span>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </footer>
   );
 }
