@@ -12,39 +12,19 @@ const routes = (
     <Route index element={<MainPage />} />
     <Route
       path="jewelery"
-      element={
-        <ShoppingCategory
-          categoryText={"welcome to the jewelery category"}
-          productCategory={"jewelery"}
-        />
-      }
+      element={<ShoppingCategory productCategory={"jewelery"} />}
     />
     <Route
       path="electronics"
-      element={
-        <ShoppingCategory
-          categoryText={"welcome to the electronics category"}
-          productCategory={"electronics"}
-        />
-      }
+      element={<ShoppingCategory productCategory={"electronics"} />}
     />
     <Route
       path="men"
-      element={
-        <ShoppingCategory
-          categoryText={"welcome to the man clothing"}
-          productCategory={"men's clothing"}
-        />
-      }
+      element={<ShoppingCategory productCategory={"men's clothing"} />}
     />
     <Route
       path="women"
-      element={
-        <ShoppingCategory
-          categoryText={"welcome to the womens clothing"}
-          productCategory={"women's clothing"}
-        />
-      }
+      element={<ShoppingCategory productCategory={"women's clothing"} />}
     />
     <Route path="/:categoryName/:id" element={<Product />} />
     <Route path="/:categoryName/:id/productadded" element={<ProductAdded />} />
