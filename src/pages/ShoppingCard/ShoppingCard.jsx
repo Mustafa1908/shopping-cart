@@ -8,7 +8,7 @@ export default function ShoppingCard() {
   const [productCount, setProductCount] = useContext(NumberOfProductContext);
   const [finalPrice, setFinalPrice] = useState(0);
 
-  // Calculate all products price
+  // Calculate total price
   useEffect(() => {
     let priceTotal = 0;
     for (let i = 0; i < productList.length; i++) {
@@ -55,7 +55,7 @@ export default function ShoppingCard() {
 
   return (
     <main className={shoppingCard.main}>
-      <div className={shoppingCard.cardContainer}>
+      <section className={shoppingCard.cardContainer}>
         <h2 className={shoppingCard.shoppingCardHeader}>Your Cart</h2>
         <div className={shoppingCard.cardProductContainer}>
           <div className={shoppingCard.categoryTitleContainer}>
@@ -70,7 +70,7 @@ export default function ShoppingCard() {
               productList.map((product, index) => {
                 return (
                   <div
-                    key={productList[index][5]}
+                    key={productList[index][0]}
                     className={shoppingCard.productItemContainer}
                   >
                     <div className={shoppingCard.productImageTitleContainer}>
@@ -148,7 +148,7 @@ export default function ShoppingCard() {
             Keep shopping
           </Link>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

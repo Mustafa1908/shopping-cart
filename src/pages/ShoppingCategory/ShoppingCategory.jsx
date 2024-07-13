@@ -2,10 +2,8 @@ import { useState, useEffect } from "react";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import shop from "./ShoppingCategory.module.css";
 
-export default function ShoppingCategory({ categoryText, productCategory }) {
+export default function ShoppingCategory({ productCategory }) {
   const [fullProductArray, setFullProductArray] = useState(null);
-  console.log(fullProductArray);
-
   async function createProductsCardsArray() {
     try {
       const response = await fetch(

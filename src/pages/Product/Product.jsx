@@ -46,7 +46,7 @@ export default function Product() {
   }
 
   return (
-    <div key={productArray.key} className={product.productContainer}>
+    <main key={productArray.key} className={product.productContainer}>
       <div className={product.productImageContainer}>
         <img
           src={productArray.state.image}
@@ -54,7 +54,7 @@ export default function Product() {
           className={product.productImage}
         />
       </div>
-      <div className={product.productInformationContainer}>
+      <article className={product.productInformationContainer}>
         <div className={product.productMainInformationContainer}>
           <h2 className={product.productHeader}>{productArray.state.title}</h2>
           <span className={product.productPrice}>
@@ -105,7 +105,7 @@ export default function Product() {
             Add to cart
           </button>
         </Link>
-      </div>
-    </div>
+      </article>
+    </main>
   );
 }
