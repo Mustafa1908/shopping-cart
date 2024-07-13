@@ -17,6 +17,9 @@ export default function Header() {
             >
               person
             </span>
+            <span class={header.shoppingIcon + " material-symbols-outlined"}>
+              favorite
+            </span>
             <Link to={"shoppingcard"} className={header.headerIconLink}>
               <span
                 className={header.shoppingIcon + " material-symbols-outlined"}
