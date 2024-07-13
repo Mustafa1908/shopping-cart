@@ -11,26 +11,28 @@ export default function ProductItem({
 }) {
   return (
     <>
-      <Link
-        to={"/" + productCategory + "/" + productData.key}
-        state={product}
-        className={productItem.productLink}
-      >
-        <div className={productItem.productContainer}>
-          <img
-            key={productDescription}
-            src={productImage}
-            alt=""
-            className={productItem.productImage}
-          />
-          <div className={productItem.productDescriptionContainer}>
-            <span className={productItem.productText}>{productTitle}</span>
-            <span className={productItem.productPrice}>
-              ${productData.price}
-            </span>
+      <article>
+        <Link
+          to={"/" + productCategory + "/" + productData.key}
+          state={product}
+          className={productItem.productLink}
+        >
+          <div className={productItem.productContainer}>
+            <img
+              key={productDescription}
+              src={productImage}
+              alt=""
+              className={productItem.productImage}
+            />
+            <div className={productItem.productDescriptionContainer}>
+              <span className={productItem.productText}>{productTitle}</span>
+              <span className={productItem.productPrice}>
+                ${productData.price}
+              </span>
+            </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </article>
     </>
   );
 }
