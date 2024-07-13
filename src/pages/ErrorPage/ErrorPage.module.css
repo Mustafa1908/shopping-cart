@@ -12,6 +12,10 @@
   text-align: center;
 }
 
+.errorImage {
+  width: 22rem;
+}
+
 .linkToContainer {
   display: flex;
   align-items: center;
