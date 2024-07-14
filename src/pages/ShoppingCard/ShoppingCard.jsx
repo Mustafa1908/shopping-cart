@@ -89,7 +89,6 @@ export default function ShoppingCard() {
                   >
                     <div className={shoppingCard.productImageTitleContainer}>
                       <img
-                        key={product[0]}
                         src={product[2]}
                         alt=""
                         className={shoppingCard.productImage}

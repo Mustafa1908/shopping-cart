@@ -36,30 +36,25 @@ export default function ShoppingCategory({ productCategory }) {
       {fullProductArray &&
         fullProductArray.map((product) => {
           return (
-            <>
-              <article>
-                <Link
-                  to={"/" + productCategory + "/" + product.key}
-                  state={product}
-                  className={shop.productLink}
-                >
-                  <div className={shop.productContainer}>
-                    <img
-                      key={product.description}
-                      src={product.image}
-                      alt=""
-                      className={shop.productImage}
-                    />
-                    <div className={shop.productDescriptionContainer}>
-                      <span className={shop.productText}>{product.title}</span>
-                      <span className={shop.productPrice}>
-                        ${product.price}
-                      </span>
-                    </div>
+            <article key={product.key}>
+              <Link
+                to={"/" + productCategory + "/" + product.key}
+                state={product}
+                className={shop.productLink}
+              >
+                <div className={shop.productContainer}>
+                  <img
+                    src={product.image}
+                    alt=""
+                    className={shop.productImage}
+                  />
+                  <div className={shop.productDescriptionContainer}>
+                    <span className={shop.productText}>{product.title}</span>
+                    <span className={shop.productPrice}>${product.price}</span>
                   </div>
-                </Link>
-              </article>
-            </>
+                </div>
+              </Link>
+            </article>
           );
         })}
     </main>
