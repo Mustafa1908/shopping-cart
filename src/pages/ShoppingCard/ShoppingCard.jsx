@@ -10,6 +10,10 @@ export default function ShoppingCard() {
 
   // Calculate total price
   useEffect(() => {
+    if (productList === "" || productList.length === 0) {
+      showMessage("There doesn't seem to be any items in your card...");
+    }
+
     let priceTotal = 0;
     for (let i = 0; i < productList.length; i++) {
       priceTotal += productList[i][1];
@@ -51,6 +55,16 @@ export default function ShoppingCard() {
     setProductList("");
     setFinalPrice(0);
     setProductCount(0);
+  }
+
+  function showMessage(message) {
+    let productContainer = document.querySelector(
+      "._productsContainer_9dkno_70"
+    );
+    let messageParagraph = document.createElement("p");
+
+    messageParagraph.innerText = message;
+    productContainer.appendChild(messageParagraph);
   }
 
   return (
