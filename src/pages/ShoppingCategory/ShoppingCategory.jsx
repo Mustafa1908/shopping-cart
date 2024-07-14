@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import ProductItem from "../../components/ProductItem/ProductItem";
+import { Link } from "react-router-dom";
 import shop from "./ShoppingCategory.module.css";
 
 export default function ShoppingCategory({ productCategory }) {
@@ -37,15 +37,28 @@ export default function ShoppingCategory({ productCategory }) {
         fullProductArray.map((product) => {
           return (
             <>
-              <ProductItem
-                productData={product}
-                product={product}
-                productDescription={product.description}
-                productImage={product.image}
-                productTitle={product.title}
-                key={product.key}
-                productCategory={productCategory}
-              />
+              <article>
+                <Link
+                  to={"/" + productCategory + "/" + product.key}
+                  state={product}
+                  className={shop.productLink}
+                >
+                  <div className={shop.productContainer}>
+                    <img
+                      key={product.description}
+                      src={product.image}
+                      alt=""
+                      className={shop.productImage}
+                    />
+                    <div className={shop.productDescriptionContainer}>
+                      <span className={shop.productText}>{product.title}</span>
+                      <span className={shop.productPrice}>
+                        ${product.price}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </article>
             </>
           );
         })}
