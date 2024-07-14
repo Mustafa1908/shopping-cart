@@ -59,7 +59,7 @@ export default function ShoppingCard() {
 
   function showMessage(message) {
     let productContainer = document.querySelector(
-      "._productsContainer_9dkno_70"
+      "._productsContainer_zef2r_70"
     );
     let messageParagraph = document.createElement("p");
 

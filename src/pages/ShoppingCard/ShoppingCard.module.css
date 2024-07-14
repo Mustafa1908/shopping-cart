@@ -212,6 +212,7 @@ input::-webkit-inner-spin-button {
 
 .checkoutButton:hover {
   cursor: pointer;
+  opacity: 0.9;
 }
 
 .keepShoppingText {
