@@ -1,4 +1,4 @@
-import LinkTo from "../../components/LinkTo/LinkTo";
+import LinkButton from "../../components/LinkButton/LinkButton";
 import errorPage from "./ErrorPage.module.css";
 import dog from "../../assets/images/dog.jpg";
 
@@ -14,11 +14,11 @@ const ErrorPage = () => {
       <img src={dog} alt="" className={errorPage.errorImage} />
       <span>Try the links below!</span>
       <div className={errorPage.linkToContainer}>
-        <LinkTo LinkText={"MAINPAGE"} LinkPath={"/"} />
-        <LinkTo LinkText={"JEWELERY"} LinkPath={"/jewelery"} />
-        <LinkTo LinkText={"ELECTRONICS"} LinkPath={"/electronics"} />
-        <LinkTo LinkText={"MEN"} LinkPath={"/men"} />
-        <LinkTo LinkText={"WOMEN"} LinkPath={"/women"} />
+        <LinkButton LinkText={"MAINPAGE"} LinkPath={"/"} />
+        <LinkButton LinkText={"JEWELERY"} LinkPath={"/jewelery"} />
+        <LinkButton LinkText={"ELECTRONICS"} LinkPath={"/electronics"} />
+        <LinkButton LinkText={"MEN"} LinkPath={"/men"} />
+        <LinkButton LinkText={"WOMEN"} LinkPath={"/women"} />
       </div>
     </main>
   );
