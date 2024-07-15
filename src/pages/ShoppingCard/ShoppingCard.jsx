@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { NumberOfProductContext, ProductListContext } from "../../App";
+import { NumberOfProductContext, ProductListContext } from "../../app/App";
 import shoppingCard from "./ShoppingCard.module.css";
 
 export default function ShoppingCard() {
@@ -21,6 +21,7 @@ export default function ShoppingCard() {
     priceTotal = Number(priceTotal.toFixed(2));
     setFinalPrice(priceTotal);
   }, [productList]);
+
   const deleteByIndex = (index) => {
     setProductCount(productCount - productList[index][3]);
     setProductList((oldValues) => {

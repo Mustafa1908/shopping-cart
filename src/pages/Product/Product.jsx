@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { useLocation, Link } from "react-router-dom";
-import { ProductListContext, NumberOfProductContext } from "../../App";
+import { ProductListContext, NumberOfProductContext } from "../../app/App";
 import product from "./Product.module.css";
 
 export default function Product() {
@@ -18,6 +18,7 @@ export default function Product() {
       productArray.state.price,
     ];
 
+    //If the products is already in the cart only change the quantity
     for (let i = 0; i < productList.length; i++) {
       if (productList[i][0] === productArray.state.title) {
         let productArrayCopy = productList.slice();
