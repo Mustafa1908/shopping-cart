@@ -15,6 +15,7 @@
   font-size: var(--step--1);
   text-decoration: none;
   color: var(--link-color);
+  padding-top: 1rem;
 }
 
 .link:hover {
