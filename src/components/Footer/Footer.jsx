@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className={footer.footer}>
       <section className={footer.memberContainer}>
         <div className={footer.memberTextContainer}>
-          <h3 className={footer.memberTextHeader}>BECOME A MEMBER</h3>
+          <h2 className={footer.memberTextHeader}>BECOME A MEMBER</h2>
           <span className={footer.memberText}>
             Get free shipping, member-only discounts, and exclusive access to
             products when you join.
@@ -22,21 +22,21 @@ export default function Footer() {
         <section className={footer.mainLinkContainer}>
           <section className={footer.pageLinkContainer}>
             <div className={footer.mainLinkSet}>
-              <h3 className={footer.mainLinkSetHeader}>COMPANY</h3>
+              <h2 className={footer.mainLinkSetHeader}>COMPANY</h2>
               <span className={footer.mainLinkText}>Our Story</span>
               <span className={footer.mainLinkText}>Shop Locations</span>
               <span className={footer.mainLinkText}>News</span>
               <span className={footer.mainLinkText}>Philanthropy</span>
             </div>
             <div className={footer.mainLinkSet}>
-              <h3 className={footer.mainLinkSetHeader}>ACCOUNT</h3>
+              <h2 className={footer.mainLinkSetHeader}>ACCOUNT</h2>
               <span className={footer.mainLinkText}>My Page</span>
               <span className={footer.mainLinkText}>My products</span>
               <span className={footer.mainLinkText}>Orders</span>
               <span className={footer.mainLinkText}>Wishlist</span>
             </div>
             <div className={footer.mainLinkSet}>
-              <h3 className={footer.mainLinkSetHeader}>GET HELP</h3>
+              <h2 className={footer.mainLinkSetHeader}>GET HELP</h2>
               <span className={footer.mainLinkText}>Order Status</span>
               <span className={footer.mainLinkText}>Shipping & Delivery</span>
               <span className={footer.mainLinkText}>Order Cancellation</span>
