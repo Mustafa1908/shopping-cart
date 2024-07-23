@@ -16,7 +16,9 @@ export default function Footer() {
             products when you join.
           </span>
         </div>
-        <button className={footer.memberButton}>Sign up for free</button>
+        <button className={footer.memberButton} tabIndex="-1">
+          Sign up for free
+        </button>
       </section>
       <section className={footer.linkContainer}>
         <section className={footer.mainLinkContainer}>
