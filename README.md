@@ -1,6 +1,6 @@
 <h1>Shopping Card</h1>
 A basic shopping website where you can browse throughout different categories, and buy various items.
-</br></br><b>Live Preview: https://shopping-cart-nu-orpin.vercel.app///</b>
+</br></br><b><a href="https://shopping-cart-nu-orpin.vercel.app" target="_blank">Live Preview</a></b>
 </br></br><img src="https://github.com/user-attachments/assets/87fc0f07-f728-4caa-8f30-aa1e6cb7a150">
 <h2>Features</h2>
 <ul>
