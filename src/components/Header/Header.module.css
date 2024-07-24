@@ -85,6 +85,7 @@
   background-color: var(--black);
   min-width: 100%;
   min-height: 4rem;
+  padding-bottom: 0.6rem;
 }
 
 .navBarLinkContainer {
