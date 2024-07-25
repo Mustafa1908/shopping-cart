@@ -43,7 +43,7 @@ input::-webkit-inner-spin-button {
 .cardFirstTitle {
   width: 40%;
   font-size: var(--step--1);
-  font-weight: 600;
+  font-weight: bold;
   padding-left: 0.3rem;
 }
 
@@ -56,7 +56,7 @@ input::-webkit-inner-spin-button {
 .finalTitle {
   width: 20%;
   font-size: var(--step--1);
-  font-weight: 600;
+  font-weight: bold;
   padding-left: 1rem;
 }
 
@@ -197,7 +197,7 @@ input::-webkit-inner-spin-button {
 .shippingText {
   display: block;
   font-size: var(--step--2);
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .checkoutButton {
