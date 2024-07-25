@@ -38,7 +38,8 @@
 
 .imageText {
   font-size: var(--step-3);
-  color: white;
+  color: black;
+  font-weight: bold;
   text-align: center;
   opacity: 1;
 }
