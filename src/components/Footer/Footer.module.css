@@ -50,6 +50,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   min-height: 2.5rem;
   min-width: 10rem;
+  padding: 0.5rem;
   border-radius: 3rem;
   border: 1px solid transparent;
 }
