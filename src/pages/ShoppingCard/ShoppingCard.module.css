@@ -56,7 +56,7 @@ input::-webkit-inner-spin-button {
 .finalTitle {
   width: 20%;
   font-size: var(--step--1);
-  font-weight: 600;
+  font-weight: bold;
   padding-left: 1rem;
 }
 
