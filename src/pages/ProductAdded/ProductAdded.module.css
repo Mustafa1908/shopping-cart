@@ -73,6 +73,7 @@
   background-color: #facc15;
   text-decoration: none;
   font-size: var(--step-0);
+  font-weight: bold;
 }
 
 .continueShoppingButton {
@@ -86,6 +87,7 @@
   border: 3px solid var(--button-color);
   background-color: white;
   font-size: var(--step-0);
+  font-weight: bold;
 }
 
 .checkoutButton:hover {
