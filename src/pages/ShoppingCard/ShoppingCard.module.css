@@ -50,13 +50,13 @@ input::-webkit-inner-spin-button {
 .cardTitle {
   width: 20%;
   font-size: var(--step--1);
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .finalTitle {
   width: 20%;
   font-size: var(--step--1);
-  font-weight: bold;
+  font-weight: 600;
   padding-left: 1rem;
 }
 
