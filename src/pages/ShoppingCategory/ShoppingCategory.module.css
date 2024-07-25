@@ -65,6 +65,7 @@
   width: 100%;
   text-align: left;
   font-size: var(--step-1);
+  font-weight: 600;
   padding-left: 1rem;
 }
 
