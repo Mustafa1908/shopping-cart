@@ -16,3 +16,4 @@ A basic shopping website where you can browse throughout different categories, a
 </ul>
 <h2>More Projects</h2>
 <p>Here is a link to my previous project: <a href="https://github.com/Mustafa1908/memory-card">Memory Card</a></p>
+<p>Here is a link to my next project: <a href="https://github.com/Mustafa1908/inventory-application">Videogame Inventory</a></p>
